@@ -5,7 +5,7 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Xunit.SkippableFact\Xunit.SkippableFact.csproj" />
+    <ProjectReference Include="..\..\src\Xunit.SkippableFact\Xunit.SkippableFact_ForcePass.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
