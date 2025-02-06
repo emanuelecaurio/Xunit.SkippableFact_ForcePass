@@ -1,8 +1,12 @@
-Xunit.SkippableFact
+Xunit.SkippableFact_ForcePass
 ======================
 
 [![GitHub Actions status](https://github.com/aarnott/Xunit.SkippableFact/actions/workflows/build.yml/badge.svg)](https://github.com/AArnott/Xunit.SkippableFact/actions/workflows/build.yml)
 [![NuGet package](https://img.shields.io/nuget/v/xunit.skippablefact.svg)](https://nuget.org/packages/xunit.skippablefact)
+
+Same ReadMe of Xunit.SkippableFact.
+
+The project difference regards that skipped test will be successful instead of being ignored.
 
 This project allows for Xunit tests that can determine during execution that they should report a "skipped" result.
 This can be useful when a precondition is not satisfied, or the test is over functionality that does not exist on the platform being tested.
