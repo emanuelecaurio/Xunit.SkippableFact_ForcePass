@@ -2,7 +2,7 @@
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xunit.SkippableFact", "src\Xunit.SkippableFact\Xunit.SkippableFact.csproj", "{EA6330CC-B135-405D-AF9B-BD802B508985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xunit.SkippableFact", "src\Xunit.SkippableFact\Xunit.SkippableFact_ForcePass.csproj", "{EA6330CC-B135-405D-AF9B-BD802B508985}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1DC7855-CCA5-43C7-B1AB-D8D547E28A85}"
 	ProjectSection(SolutionItems) = preProject
