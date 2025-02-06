@@ -8,6 +8,14 @@ using Xunit.Abstractions;
 
 namespace Xunit.Sdk;
 
+public class TestSucceed : TestPassed {
+    public TestSucceed(ITest test, string reason)
+        : base(test, 0m, null)
+    {
+        Console.WriteLine($"[Skip reason] - {reason}");
+    }
+}
+
 /// <summary>
 /// Intercepts test results on the message bus and re-interprets
 /// <see cref="SkipException"/> as a <see cref="TestSkipped"/> result.
@@ -81,7 +89,7 @@ public class SkippableTestMessageBus : IMessageBus
             if (skipTest)
             {
                 this.SkippedCount++;
-                return this.inner.QueueMessage(new TestSkipped(failed.Test, skipReason));
+                return this.inner.QueueMessage(new TestSucceed(failed.Test, skipReason));
             }
         }
 
