@@ -9,7 +9,7 @@ namespace Xunit;
 /// Static methods for dynamically skipping tests identified with
 /// the <see cref="SkippableFactAttribute"/>.
 /// </summary>
-public static class Skip
+public static class Skip_ForcePass
 {
     /// <summary>
     /// Throws an exception that results in a "Skipped" result for the test.
@@ -35,6 +35,6 @@ public static class Skip
         [DoesNotReturnIf(false)] bool condition,
         string? reason = null)
     {
-        Skip.If(!condition, reason);
+        Skip_ForcePass.If(!condition, reason);
     }
 }
