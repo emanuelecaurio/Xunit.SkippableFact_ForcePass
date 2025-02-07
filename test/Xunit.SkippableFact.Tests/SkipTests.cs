@@ -8,8 +8,8 @@ public class SkipTests
     [Fact]
     public void If()
     {
-        Assert.Throws<SkipException>(() => Skip.If(true));
-        Skip.If(false);
+        Assert.Throws<SkipException>(() => Skip_ForcePass.If(true));
+        Skip_ForcePass.If(false);
     }
 
     [Fact]
@@ -18,7 +18,7 @@ public class SkipTests
         string reason = "some reason";
         try
         {
-            Skip.If(true, reason);
+            Skip_ForcePass.If(true, reason);
             Assert.Fail("If should have thrown.");
         }
         catch (SkipException ex)
@@ -30,8 +30,8 @@ public class SkipTests
     [Fact]
     public void IfNot()
     {
-        Assert.Throws<SkipException>(() => Skip.IfNot(false));
-        Skip.IfNot(true);
+        Assert.Throws<SkipException>(() => Skip_ForcePass.IfNot(false));
+        Skip_ForcePass.IfNot(true);
     }
 
     [Fact]
@@ -40,7 +40,7 @@ public class SkipTests
         string reason = "some reason";
         try
         {
-            Skip.IfNot(false, reason);
+            Skip_ForcePass.IfNot(false, reason);
             Assert.Fail("IfNot should have thrown.");
         }
         catch (SkipException ex)
@@ -59,7 +59,7 @@ public class SkipTests
             ? "Not null"
             : null;
 
-        Skip.If(value is null);
+        Skip_ForcePass.If(value is null);
 
         // Does not trigger a nullable reference type warning
         _ = value.Substring(0);
@@ -75,7 +75,7 @@ public class SkipTests
             ? "Not null"
             : null;
 
-        Skip.IfNot(value is object);
+        Skip_ForcePass.IfNot(value is object);
 
         // Does not trigger a nullable reference type warning
         _ = value.Substring(0);

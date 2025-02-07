@@ -11,7 +11,7 @@ public class GettingStarted
     [SkippableFact]
     public void RuntimeCheck()
     {
-        Skip.IfNot(Environment.GetEnvironmentVariable("RunThisTest") == "true");
+        Skip_ForcePass.IfNot(Environment.GetEnvironmentVariable("RunThisTest") == "true");
     }
     #endregion
 

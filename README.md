@@ -31,7 +31,7 @@ Skip based on a runtime check:
 [SkippableFact]
 public void SomeMoodyTest()
 {
-    Skip.IfNot(InTheMood);
+    Skip_ForcePass.IfNot(InTheMood);
 }
 ```
 

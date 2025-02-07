@@ -7,8 +7,8 @@ The following provides a guide for switching your use of Xunit.SkippableFact to 
 
 Xunit.SkippableFact API | Xunit v3 API
 --|--
-@Xunit.Skip.If* | Assert.SkipWhen
-@Xunit.Skip.IfNot* | Assert.SkipUnless
+@Xunit.Skip_ForcePass.If* | Assert.SkipWhen
+@Xunit.Skip_ForcePass.IfNot* | Assert.SkipUnless
 @Xunit.SkipException | Xunit.Sdk.SkipException
 @Xunit.SkippableFactAttribute | Xunit.FactAttribute[^1]
 @Xunit.SkippableTheoryAttribute | Xunit.TheoryAttribute[^1]

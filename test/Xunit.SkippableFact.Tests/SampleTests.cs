@@ -10,7 +10,7 @@ public class SampleTests
     [SkippableFact]
     public void SkipMe()
     {
-        Skip.If(true, "Because it's a sample.");
+        Skip_ForcePass.If(true, "Because it's a sample.");
     }
 
     [SkippableFact]
@@ -64,7 +64,7 @@ public class SampleTests
     [InlineData(false)]
     public void SkipTheoryMaybe(bool skip)
     {
-        Skip.If(skip, "I was told to.");
+        Skip_ForcePass.If(skip, "I was told to.");
     }
 
     [SkippableFact]
@@ -72,7 +72,7 @@ public class SampleTests
     {
         Assert.Throws<Exception>(new Action(() =>
         {
-            Skip.If(true, "Skip inside Assert.Throws");
+            Skip_ForcePass.If(true, "Skip inside Assert.Throws");
             throw new Exception();
         }));
     }
