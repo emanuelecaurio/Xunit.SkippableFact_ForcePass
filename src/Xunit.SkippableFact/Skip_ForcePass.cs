@@ -22,7 +22,7 @@ public static class Skip_ForcePass
     {
         if (condition)
         {
-            throw new SkipException(reason);
+            throw new SkipFPException(reason);
         }
     }
 

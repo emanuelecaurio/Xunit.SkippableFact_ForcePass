@@ -18,7 +18,7 @@ public class TestSucceed : TestPassed {
 
 /// <summary>
 /// Intercepts test results on the message bus and re-interprets
-/// <see cref="SkipException"/> as a <see cref="TestSkipped"/> result.
+/// <see cref="SkipFPException"/> as a <see cref="TestSkipped"/> result.
 /// </summary>
 public class SkippableTestMessageBus : IMessageBus
 {
@@ -71,13 +71,13 @@ public class SkippableTestMessageBus : IMessageBus
             string? skipReason = null;
             switch (outerException)
             {
-                case string _ when this.ShouldSkipException(outerException):
+                case string _ when this.ShouldSkipFPException(outerException):
                     skipTest = true;
                     skipReason = failed.Messages?.FirstOrDefault();
                     break;
                 case "Xunit.Sdk.ThrowsException" when failed.ExceptionTypes.Length > 1:
                     outerException = failed.ExceptionTypes[1];
-                    if (this.ShouldSkipException(outerException))
+                    if (this.ShouldSkipFPException(outerException))
                     {
                         skipTest = true;
                         skipReason = failed.Messages?.Length > 1 ? failed.Messages[1] : null;
@@ -116,6 +116,6 @@ public class SkippableTestMessageBus : IMessageBus
         this.isDisposed = true;
     }
 
-    private bool ShouldSkipException(string exceptionType) =>
+    private bool ShouldSkipFPException(string exceptionType) =>
         Array.IndexOf(this.SkippingExceptionNames, exceptionType) >= 0;
 }

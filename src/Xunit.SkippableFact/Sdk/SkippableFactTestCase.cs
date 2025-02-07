@@ -11,7 +11,7 @@ using Xunit.Abstractions;
 namespace Xunit.Sdk;
 
 /// <summary>
-/// A test case that interprets <see cref="SkipException"/> as a <see cref="TestSkipped"/> result.
+/// A test case that interprets <see cref="SkipFPException"/> as a <see cref="TestSkipped"/> result.
 /// </summary>
 public class SkippableFactTestCase : XunitTestCase
 {

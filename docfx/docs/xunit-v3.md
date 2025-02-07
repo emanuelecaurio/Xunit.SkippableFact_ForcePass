@@ -9,7 +9,7 @@ Xunit.SkippableFact API | Xunit v3 API
 --|--
 @Xunit.Skip_ForcePass.If* | Assert.SkipWhen
 @Xunit.Skip_ForcePass.IfNot* | Assert.SkipUnless
-@Xunit.SkipException | Xunit.Sdk.SkipException
+@Xunit.SkipFPException | Xunit.Sdk.SkipFPException
 @Xunit.SkippableFactFPAttribute | Xunit.FactAttribute[^1]
 @Xunit.SkippableTheoryFPAttribute | Xunit.TheoryAttribute[^1]
 

@@ -8,7 +8,7 @@ public class SkipTests
     [Fact]
     public void If()
     {
-        Assert.Throws<SkipException>(() => Skip_ForcePass.If(true));
+        Assert.Throws<SkipFPException>(() => Skip_ForcePass.If(true));
         Skip_ForcePass.If(false);
     }
 
@@ -21,7 +21,7 @@ public class SkipTests
             Skip_ForcePass.If(true, reason);
             Assert.Fail("If should have thrown.");
         }
-        catch (SkipException ex)
+        catch (SkipFPException ex)
         {
             Assert.Equal(reason, ex.Message);
         }
@@ -30,7 +30,7 @@ public class SkipTests
     [Fact]
     public void IfNot()
     {
-        Assert.Throws<SkipException>(() => Skip_ForcePass.IfNot(false));
+        Assert.Throws<SkipFPException>(() => Skip_ForcePass.IfNot(false));
         Skip_ForcePass.IfNot(true);
     }
 
@@ -43,7 +43,7 @@ public class SkipTests
             Skip_ForcePass.IfNot(false, reason);
             Assert.Fail("IfNot should have thrown.");
         }
-        catch (SkipException ex)
+        catch (SkipFPException ex)
         {
             Assert.Equal(reason, ex.Message);
         }

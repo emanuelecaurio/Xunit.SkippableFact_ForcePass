@@ -10,7 +10,7 @@ namespace Xunit;
 /// Attribute that is applied to a method to indicate that it is a fact that should
 /// be run by the test runner.
 /// The test may produce a "skipped test" result by calling
-/// <see cref="Skip_ForcePass.If(bool, string)"/> or otherwise throwing a <see cref="SkipException"/>.
+/// <see cref="Skip_ForcePass.If(bool, string)"/> or otherwise throwing a <see cref="SkipFPException"/>.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 [XunitTestCaseDiscoverer("Xunit.Sdk.SkippableFactDiscoverer", ThisAssembly.AssemblyName)]

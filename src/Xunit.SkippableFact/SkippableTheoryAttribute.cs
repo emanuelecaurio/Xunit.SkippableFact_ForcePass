@@ -13,7 +13,7 @@ namespace Xunit;
 /// multiple times (once with each data row). Data is provided by attributes which
 /// derive from Xunit.Sdk.DataAttribute (notably, Xunit.InlineDataAttribute and Xunit.MemberDataAttribute).
 /// The test may produce a "skipped test" result by calling
-/// <see cref="Skip_ForcePass.If(bool, string)"/> or otherwise throwing a <see cref="SkipException"/>.
+/// <see cref="Skip_ForcePass.If(bool, string)"/> or otherwise throwing a <see cref="SkipFPException"/>.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 [XunitTestCaseDiscoverer("Xunit.Sdk.SkippableTheoryDiscoverer", ThisAssembly.AssemblyName)]
