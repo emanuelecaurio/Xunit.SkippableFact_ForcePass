@@ -3,9 +3,13 @@
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <RootNamespace>Xunit</RootNamespace>
 
-    <Title>Dynamic test skipping for Xunit</Title>
+    <Title>Dynamic test skipping for Xunit and force passing</Title>
     <Description>Make your Xunit test methods self-determine to report a "skipped" result. Useful for such cases as "not supported on this platform" results or other environmental inputs.</Description>
-    <PackageTags>xunit testing skipping</PackageTags>
+    <PackageTags>xunit testing skipping forcePassing</PackageTags>
+    <Authors>Emanuele</Authors>
+    <Company />
+    <PackageProjectUrl>https://github.com/emanuelecaurio/Xunit.SkippableFact_ForcePass</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/emanuelecaurio/Xunit.SkippableFact_ForcePass</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Update="xunit.runner.json">
