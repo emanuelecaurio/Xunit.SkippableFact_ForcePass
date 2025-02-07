@@ -17,16 +17,16 @@ namespace Xunit;
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 [XunitTestCaseDiscoverer("Xunit.Sdk.SkippableTheoryDiscoverer", ThisAssembly.AssemblyName)]
-public class SkippableTheoryAttribute : TheoryAttribute
+public class SkippableTheoryFPAttribute : TheoryAttribute
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="SkippableTheoryAttribute"/> class.
+    /// Initializes a new instance of the <see cref="SkippableTheoryFPAttribute"/> class.
     /// </summary>
     /// <param name="skippingExceptions">
     /// Exception types that, if thrown, should cause the test to register as skipped.
     /// </param>
 #pragma warning disable CA1801 // Review unused parameters - they are used via reflection elsewhere.
-    public SkippableTheoryAttribute(params Type[] skippingExceptions)
+    public SkippableTheoryFPAttribute(params Type[] skippingExceptions)
 #pragma warning restore CA1801 // Review unused parameters
     {
     }

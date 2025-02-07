@@ -14,16 +14,16 @@ namespace Xunit;
 /// </summary>
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 [XunitTestCaseDiscoverer("Xunit.Sdk.SkippableFactDiscoverer", ThisAssembly.AssemblyName)]
-public class SkippableFactAttribute : FactAttribute
+public class SkippableFactFPAttribute : FactAttribute
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="SkippableFactAttribute"/> class.
+    /// Initializes a new instance of the <see cref="SkippableFactFPAttribute"/> class.
     /// </summary>
     /// <param name="skippingExceptions">
     /// Exception types that, if thrown, should cause the test to register as skipped.
     /// </param>
 #pragma warning disable CA1801 // Review unused parameters - they are used via reflection elsewhere.
-    public SkippableFactAttribute(params Type[] skippingExceptions)
+    public SkippableFactFPAttribute(params Type[] skippingExceptions)
 #pragma warning restore CA1801 // Review unused parameters
     {
     }

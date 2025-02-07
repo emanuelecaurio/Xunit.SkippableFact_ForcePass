@@ -10,7 +10,7 @@ Xunit.SkippableFact API | Xunit v3 API
 @Xunit.Skip_ForcePass.If* | Assert.SkipWhen
 @Xunit.Skip_ForcePass.IfNot* | Assert.SkipUnless
 @Xunit.SkipException | Xunit.Sdk.SkipException
-@Xunit.SkippableFactAttribute | Xunit.FactAttribute[^1]
-@Xunit.SkippableTheoryAttribute | Xunit.TheoryAttribute[^1]
+@Xunit.SkippableFactFPAttribute | Xunit.FactAttribute[^1]
+@Xunit.SkippableTheoryFPAttribute | Xunit.TheoryAttribute[^1]
 
 [^1]: Xunit's built-in attributes are sufficient. Although they lack the ability to take a list of exception types that should produce a Skipped result. This [may come in the future](https://github.com/xunit/xunit/issues/3101).

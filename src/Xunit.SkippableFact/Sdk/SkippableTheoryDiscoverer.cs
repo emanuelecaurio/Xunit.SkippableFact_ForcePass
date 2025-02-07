@@ -12,7 +12,7 @@ using Xunit.Abstractions;
 namespace Xunit.Sdk;
 
 /// <summary>
-/// Transforms <see cref="SkippableTheoryAttribute"/> test theories into test cases.
+/// Transforms <see cref="SkippableTheoryFPAttribute"/> test theories into test cases.
 /// </summary>
 public class SkippableTheoryDiscoverer : IXunitTestCaseDiscoverer
 {

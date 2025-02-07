@@ -7,7 +7,7 @@ namespace Xunit;
 
 /// <summary>
 /// Static methods for dynamically skipping tests identified with
-/// the <see cref="SkippableFactAttribute"/>.
+/// the <see cref="SkippableFactFPAttribute"/>.
 /// </summary>
 public static class Skip_ForcePass
 {

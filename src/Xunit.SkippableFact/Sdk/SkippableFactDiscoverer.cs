@@ -10,7 +10,7 @@ using Xunit.Abstractions;
 namespace Xunit.Sdk;
 
 /// <summary>
-/// Transforms <see cref="SkippableFactAttribute"/> test methods into test cases.
+/// Transforms <see cref="SkippableFactFPAttribute"/> test methods into test cases.
 /// </summary>
 public class SkippableFactDiscoverer : IXunitTestCaseDiscoverer
 {
@@ -31,7 +31,7 @@ public class SkippableFactDiscoverer : IXunitTestCaseDiscoverer
     /// <summary>
     /// Translates the types of exceptions that should be considered as "skip" exceptions into their full names.
     /// </summary>
-    /// <param name="factAttribute">The <see cref="SkippableFactAttribute"/>.</param>
+    /// <param name="factAttribute">The <see cref="SkippableFactFPAttribute"/>.</param>
     /// <returns>An array of full names of types.</returns>
     public static string[] GetSkippableExceptionNames(IAttributeInfo factAttribute)
     {

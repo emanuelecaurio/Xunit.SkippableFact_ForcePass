@@ -28,7 +28,7 @@ Below is a sampling of uses.
 Skip based on a runtime check:
 
 ```csharp
-[SkippableFact]
+[SkippableFactFP]
 public void SomeMoodyTest()
 {
     Skip_ForcePass.IfNot(InTheMood);
@@ -38,7 +38,7 @@ public void SomeMoodyTest()
 Skip based on a thrown exception:
 
 ```csharp
-[SkippableFact(typeof(NotSupportedException))]
+[SkippableFactFP(typeof(NotSupportedException))]
 public void TestFunctionalityWhichIsNotSupportedOnSomePlatforms()
 {
     // Test functionality. If it throws any of the exceptions listed in the attribute,
@@ -49,7 +49,7 @@ public void TestFunctionalityWhichIsNotSupportedOnSomePlatforms()
 Skip based on `SupportedOSPlatformAttribute`:
 
 ```csharp
-[SkippableFact, SupportedOSPlatform("Windows")]
+[SkippableFactFP, SupportedOSPlatform("Windows")]
 public void TestCngKey()
 {
     var key = CngKey.Create(CngAlgorithm.Rsa);

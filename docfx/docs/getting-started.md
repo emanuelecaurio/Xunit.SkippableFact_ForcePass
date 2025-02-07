@@ -9,7 +9,7 @@ Click on the badge to find its latest version and the instructions for consuming
 
 ## Usage
 
-Always use the @Xunit.SkippableFactAttribute or @Xunit.SkippableTheoryAttribute on test methods that you want to potentially skip for.
+Always use the @Xunit.SkippableFactFPAttribute or @Xunit.SkippableTheoryFPAttribute on test methods that you want to potentially skip for.
 
 ### Conditional runtime skipping
 

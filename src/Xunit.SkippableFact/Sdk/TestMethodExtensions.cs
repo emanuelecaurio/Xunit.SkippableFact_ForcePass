@@ -100,7 +100,7 @@ internal static class TestMethodExtensions
     /// [SupportedOSPlatform("macOS")]
     /// public class MyTests
     /// {
-    ///     [SkippableFact]
+    ///     [SkippableFactFP]
     ///     [SupportedOSPlatform("Linux")]
     ///     public void MyTest()
     ///     {

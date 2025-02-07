@@ -8,7 +8,7 @@ using Xunit;
 public class GettingStarted
 {
     #region RuntimeCheck
-    [SkippableFact]
+    [SkippableFactFP]
     public void RuntimeCheck()
     {
         Skip_ForcePass.IfNot(Environment.GetEnvironmentVariable("RunThisTest") == "true");
@@ -16,7 +16,7 @@ public class GettingStarted
     #endregion
 
     #region ThrownExceptions
-    [SkippableFact(typeof(NotSupportedException), typeof(NotImplementedException))]
+    [SkippableFactFP(typeof(NotSupportedException), typeof(NotImplementedException))]
     public void TestFunctionalityWhichIsNotSupportedOnSomePlatforms()
     {
         // Test functionality. If it throws any of the exceptions listed in the attribute,
@@ -27,7 +27,7 @@ public class GettingStarted
     #region OSCheck
     public class AnyTestClass
     {
-        [SkippableFact]
+        [SkippableFactFP]
         [SupportedOSPlatform("Windows")]
         public void TestCngKey()
         {
@@ -39,7 +39,7 @@ public class GettingStarted
     [SupportedOSPlatform("Windows")]
     public class WindowsOnlyTestClass
     {
-        [SkippableFact]
+        [SkippableFactFP]
         public void SomeTest()
         {
             // This test will only run on Windows.
